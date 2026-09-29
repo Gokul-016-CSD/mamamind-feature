@@ -1,0 +1,7 @@
+import React from 'react';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { router } from 'expo-router';
+import { colors, radius } from '@/theme';
+import { SoftButton } from '@/components/ui';
+export default function FatherDashboard(){return <ScrollView style={styles.root} contentContainerStyle={styles.content}><Text style={styles.title}>Care circle 🤍</Text><Text style={styles.sub}>The best help is often simple, specific, and offered before mama has to ask twice.</Text><View style={styles.card}><Text style={styles.cardTitle}>Today, you can make one thing lighter.</Text><Text style={styles.item}>• Take one household task without asking.</Text><Text style={styles.item}>• Bring water or a snack.</Text><Text style={styles.item}>• Give mama 20 quiet minutes.</Text><Text style={styles.item}>• Say: “I’ve got this one.”</Text></View><SoftButton title="Open shared care ideas" onPress={()=>router.push('/care')}/></ScrollView>}
+const styles=StyleSheet.create({root:{flex:1,backgroundColor:colors.background},content:{padding:24,paddingTop:65,maxWidth:650,width:'100%',alignSelf:'center'},title:{fontSize:32,fontWeight:'900',color:colors.text},sub:{color:colors.muted,lineHeight:23,marginTop:8,marginBottom:20},card:{backgroundColor:colors.mintBreeze,borderRadius:radius.lg,padding:20,marginBottom:15},cardTitle:{fontWeight:'900',fontSize:19,color:colors.text,marginBottom:10},item:{color:colors.text,lineHeight:26}});
